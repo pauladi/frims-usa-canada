@@ -42,7 +42,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ onClose }) => {
               value={filters.specialty || ""}
               onValueChange={(value) => setFilters({ specialty: value || null })}
             >
-              <SelectTrigger className="w-full">
+              <SelectTrigger className="w-full bg-white border-input">
                 <SelectValue placeholder="Select specialty" />
               </SelectTrigger>
               <SelectContent>
@@ -62,7 +62,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ onClose }) => {
               value={filters.size || ""}
               onValueChange={(value) => setFilters({ size: value || null })}
             >
-              <SelectTrigger className="w-full">
+              <SelectTrigger className="w-full bg-white border-input">
                 <SelectValue placeholder="Select size" />
               </SelectTrigger>
               <SelectContent>
@@ -82,7 +82,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ onClose }) => {
               value={filters.state || ""}
               onValueChange={(value) => setFilters({ state: value || null })}
             >
-              <SelectTrigger className="w-full">
+              <SelectTrigger className="w-full bg-white border-input">
                 <SelectValue placeholder="Select state/province" />
               </SelectTrigger>
               <SelectContent>
@@ -97,7 +97,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ onClose }) => {
           </div>
         </div>
 
-        <div className="pt-4 border-t mt-6">
+        <div className="pt-4 mt-6">
           <Button 
             onClick={() => {
               clearFilters();
@@ -107,12 +107,6 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ onClose }) => {
             className="w-full"
           >
             Clear Filters
-          </Button>
-          <Button 
-            onClick={onClose}
-            className="w-full mt-2"
-          >
-            Apply Filters
           </Button>
         </div>
       </div>
