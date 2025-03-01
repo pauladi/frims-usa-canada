@@ -54,12 +54,12 @@ export interface DirectoryContextType {
 }
 
 export const SPECIALTIES = [
-  'Corporate Law',
-  'IT Law',
-  'Financial Accounting',
-  'Tax Accounting',
-  'Business Law',
-  'Regulatory Compliance'
+  'Laravel Framework',
+  'Laravel Livewire',
+  'Laravel Nova',
+  'Laravel Forge',
+  'Laravel Vapor',
+  'Laravel Horizon'
 ];
 
 export const SIZES = ['Small', 'Medium', 'Large'];
