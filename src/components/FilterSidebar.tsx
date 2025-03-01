@@ -22,7 +22,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ onClose }) => {
   return (
     <div className="fixed inset-y-0 right-0 z-50 flex animate-slide-in">
       <div className="fixed inset-0 bg-black/20" onClick={onClose} />
-      <div className="sidebar-content bg-background p-6 flex flex-col h-full ml-auto w-80 shadow-lg">
+      <div className="sidebar-content p-6 flex flex-col h-full ml-auto">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-lg font-semibold">Filters</h2>
           <Button
@@ -35,18 +35,17 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ onClose }) => {
           </Button>
         </div>
 
-        <div className="space-y-6 flex-1 overflow-y-auto">
+        <div className="space-y-6 flex-1">
           <div className="space-y-2">
             <label className="text-sm font-medium">Specialty</label>
             <Select
               value={filters.specialty || ""}
               onValueChange={(value) => setFilters({ specialty: value || null })}
             >
-              <SelectTrigger className="w-full bg-white border-input">
+              <SelectTrigger className="w-full">
                 <SelectValue placeholder="Select specialty" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">All Specialties</SelectItem>
                 {SPECIALTIES.map((specialty) => (
                   <SelectItem key={specialty} value={specialty}>
                     {specialty}
@@ -62,11 +61,10 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ onClose }) => {
               value={filters.size || ""}
               onValueChange={(value) => setFilters({ size: value || null })}
             >
-              <SelectTrigger className="w-full bg-white border-input">
+              <SelectTrigger className="w-full">
                 <SelectValue placeholder="Select size" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">All Sizes</SelectItem>
                 {SIZES.map((size) => (
                   <SelectItem key={size} value={size}>
                     {size}
@@ -82,11 +80,10 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ onClose }) => {
               value={filters.state || ""}
               onValueChange={(value) => setFilters({ state: value || null })}
             >
-              <SelectTrigger className="w-full bg-white border-input">
+              <SelectTrigger className="w-full">
                 <SelectValue placeholder="Select state/province" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">All States</SelectItem>
                 {STATES.map((state) => (
                   <SelectItem key={state} value={state}>
                     {state}
@@ -97,18 +94,13 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ onClose }) => {
           </div>
         </div>
 
-        <div className="pt-4 mt-6">
-          <Button 
-            onClick={() => {
-              clearFilters();
-              onClose();
-            }}
-            variant="outline"
-            className="w-full"
-          >
-            Clear Filters
-          </Button>
-        </div>
+        <Button 
+          onClick={clearFilters}
+          variant="outline"
+          className="w-full mt-6"
+        >
+          Clear Filters
+        </Button>
       </div>
     </div>
   );

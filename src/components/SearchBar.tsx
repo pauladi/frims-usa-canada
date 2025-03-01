@@ -27,7 +27,7 @@ const SearchBar: React.FC = () => {
       </div>
       <input
         type="search"
-        className="w-full pl-10 pr-4 py-2 border border-input rounded-md bg-white placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/10 transition-all"
+        className="w-full pl-10 pr-4 py-2 border border-input rounded-md bg-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/10 transition-all"
         placeholder="Search firms..."
         value={value}
         onChange={handleChange}
