@@ -1,9 +1,8 @@
 
 import React from 'react';
 import { Firm } from '@/types';
-import { MapPin } from 'lucide-react';
+import { MapPin, Building } from 'lucide-react';
 import { useDirectory } from '@/context/DirectoryContext';
-import { motion } from 'framer-motion';
 
 interface FirmCardProps {
   firm: Firm;
@@ -30,9 +29,9 @@ const FirmCard: React.FC<FirmCardProps> = ({ firm }) => {
           ))}
         </div>
       </div>
-      <div>
-        <p className="text-sm font-medium text-muted-foreground mb-1">Size:</p>
-        <span className="chip">{firm.size}</span>
+      <div className="flex items-center">
+        <Building className="w-4 h-4 mr-1" />
+        <span className="text-sm text-muted-foreground">{firm.size}</span>
       </div>
     </div>
   );
