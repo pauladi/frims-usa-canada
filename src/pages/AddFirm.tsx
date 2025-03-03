@@ -50,8 +50,8 @@ const AddFirm: React.FC = () => {
 
   return (
     <Dialog open={modalType === 'add'} onOpenChange={() => closeModal()}>
-      <DialogContent className="modal-content sm:max-w-xl">
-        <DialogHeader className="px-6 pt-6 pb-4 border-b">
+      <DialogContent className="sm:max-w-md md:max-w-lg">
+        <DialogHeader className="border-b pb-2">
           <div className="flex justify-between items-center w-full">
             <DialogTitle className="text-xl font-semibold">Add New Firm</DialogTitle>
             <DialogClose asChild>
@@ -62,10 +62,10 @@ const AddFirm: React.FC = () => {
           </div>
         </DialogHeader>
         
-        <form onSubmit={handleSubmit} className="p-6 space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <label className="text-sm font-medium">Firm Name</label>
+        <form onSubmit={handleSubmit} className="py-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label className="text-sm font-medium mb-1 block">Firm Name</label>
               <Input
                 name="name"
                 value={formData.name}
@@ -75,8 +75,8 @@ const AddFirm: React.FC = () => {
               />
             </div>
             
-            <div className="space-y-2">
-              <label className="text-sm font-medium">Country</label>
+            <div>
+              <label className="text-sm font-medium mb-1 block">Country</label>
               <Select
                 value={formData.country}
                 onValueChange={(value) => handleSelectChange('country', value)}
@@ -95,9 +95,9 @@ const AddFirm: React.FC = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <label className="text-sm font-medium">State/Province</label>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label className="text-sm font-medium mb-1 block">State/Province</label>
               <Select
                 value={formData.state}
                 onValueChange={(value) => handleSelectChange('state', value)}
@@ -115,8 +115,8 @@ const AddFirm: React.FC = () => {
               </Select>
             </div>
             
-            <div className="space-y-2">
-              <label className="text-sm font-medium">City</label>
+            <div>
+              <label className="text-sm font-medium mb-1 block">City</label>
               <Input
                 name="city"
                 value={formData.city}
@@ -127,8 +127,8 @@ const AddFirm: React.FC = () => {
             </div>
           </div>
 
-          <div className="space-y-2">
-            <label className="text-sm font-medium">Specialties</label>
+          <div className="mb-4">
+            <label className="text-sm font-medium mb-1 block">Specialties</label>
             <div className="grid grid-cols-2 gap-2">
               {SPECIALTIES.map((specialty) => (
                 <div key={specialty} className="flex items-center space-x-2">
@@ -147,28 +147,28 @@ const AddFirm: React.FC = () => {
             </div>
           </div>
 
-          <div className="space-y-2">
-            <label className="text-sm font-medium">Size</label>
-            <Select
-              value={formData.size}
-              onValueChange={(value) => handleSelectChange('size', value)}
-            >
-              <SelectTrigger>
-                <SelectValue placeholder="Select size" />
-              </SelectTrigger>
-              <SelectContent>
-                {SIZES.map((size) => (
-                  <SelectItem key={size} value={size}>
-                    {size}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <label className="text-sm font-medium">Email</label>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label className="text-sm font-medium mb-1 block">Size</label>
+              <Select
+                value={formData.size}
+                onValueChange={(value) => handleSelectChange('size', value)}
+              >
+                <SelectTrigger>
+                  <SelectValue placeholder="Select size" />
+                </SelectTrigger>
+                <SelectContent>
+                  {SIZES.map((size) => (
+                    <SelectItem key={size} value={size}>
+                      {size}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+            
+            <div>
+              <label className="text-sm font-medium mb-1 block">Email</label>
               <Input
                 name="email"
                 type="email"
@@ -177,9 +177,11 @@ const AddFirm: React.FC = () => {
                 placeholder="contact@example.com"
               />
             </div>
-            
-            <div className="space-y-2">
-              <label className="text-sm font-medium">Phone</label>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label className="text-sm font-medium mb-1 block">Phone</label>
               <Input
                 name="phone"
                 value={formData.phone || ''}
@@ -187,23 +189,23 @@ const AddFirm: React.FC = () => {
                 placeholder="+1 (555) 123-4567"
               />
             </div>
+            
+            <div>
+              <label className="text-sm font-medium mb-1 block">Website</label>
+              <Input
+                name="website"
+                value={formData.website || ''}
+                onChange={handleChange}
+                placeholder="www.example.com"
+              />
+            </div>
           </div>
 
-          <div className="space-y-2">
-            <label className="text-sm font-medium">Website</label>
-            <Input
-              name="website"
-              value={formData.website || ''}
-              onChange={handleChange}
-              placeholder="www.example.com"
-            />
-          </div>
-
-          <div className="flex justify-end space-x-2 pt-4">
+          <div className="flex justify-end space-x-2 pt-2 border-t mt-4">
             <Button type="button" variant="outline" onClick={closeModal}>
               Cancel
             </Button>
-            <Button type="submit">
+            <Button type="submit" className="bg-black text-white hover:bg-black/90">
               Add Firm
             </Button>
           </div>
