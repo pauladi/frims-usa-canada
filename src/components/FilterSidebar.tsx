@@ -22,8 +22,8 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ onClose }) => {
   return (
     <div className="fixed inset-y-0 right-0 z-50 flex animate-slide-in">
       <div className="fixed inset-0 bg-black/20" onClick={onClose} />
-      <div className="sidebar-content p-6 flex flex-col h-full ml-auto">
-        <div className="flex justify-between items-center mb-6">
+      <div className="sidebar-content p-6 flex flex-col h-full ml-auto bg-white">
+        <div className="flex justify-between items-center mb-8">
           <h2 className="text-lg font-semibold">Filters</h2>
           <Button
             variant="ghost"
@@ -97,7 +97,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ onClose }) => {
         <Button 
           onClick={clearFilters}
           variant="outline"
-          className="w-full mt-6"
+          className="w-full mt-8 border-gray-300"
         >
           Clear Filters
         </Button>
