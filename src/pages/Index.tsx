@@ -7,7 +7,6 @@ import FirmCard from '@/components/FirmCard';
 import FilterSidebar from '@/components/FilterSidebar';
 import FirmDetails from './FirmDetails';
 import AddFirm from './AddFirm';
-import Navigation from '@/components/Navigation';
 import { Button } from '@/components/ui/button';
 import { Plus, Filter } from 'lucide-react';
 
@@ -18,9 +17,8 @@ const DirectoryContent: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <PageHeader />
-      <Navigation />
       
-      <div className="flex flex-col sm:flex-row items-center gap-4 mb-8 mt-6">
+      <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
         <div className="w-full">
           <SearchBar />
         </div>

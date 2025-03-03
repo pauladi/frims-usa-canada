@@ -1,3 +1,4 @@
+
 export interface Firm {
   id: string;
   name: string;
@@ -53,15 +54,15 @@ export interface DirectoryContextType {
 }
 
 export const SPECIALTIES = [
-  'Laravel Framework',
-  'Laravel Livewire',
-  'Laravel Nova',
-  'Laravel Forge',
-  'Laravel Vapor',
-  'Laravel Horizon'
+  'Corporate Law',
+  'IT Law',
+  'Financial Accounting',
+  'Tax Accounting',
+  'Business Law',
+  'Regulatory Compliance'
 ];
 
-export const SIZES = ['1-10 Employees', '11-50 Employees', '51-200 Employees', '201+ Employees'];
+export const SIZES = ['Small', 'Medium', 'Large'];
 
 export const STATES = [
   'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 

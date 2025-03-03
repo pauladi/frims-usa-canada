@@ -53,7 +53,7 @@ const AddFirm: React.FC = () => {
       <DialogContent className="modal-content sm:max-w-xl">
         <DialogHeader className="px-6 pt-6 pb-4 border-b">
           <div className="flex justify-between items-center w-full">
-            <DialogTitle className="text-xl font-semibold">Add New Laravel Firm</DialogTitle>
+            <DialogTitle className="text-xl font-semibold">Add New Firm</DialogTitle>
             <DialogClose asChild>
               <Button variant="ghost" size="icon" className="h-8 w-8">
                 <X className="h-4 w-4" />
@@ -128,7 +128,7 @@ const AddFirm: React.FC = () => {
           </div>
 
           <div className="space-y-2">
-            <label className="text-sm font-medium">Laravel Specialties</label>
+            <label className="text-sm font-medium">Specialties</label>
             <div className="grid grid-cols-2 gap-2">
               {SPECIALTIES.map((specialty) => (
                 <div key={specialty} className="flex items-center space-x-2">
@@ -148,13 +148,13 @@ const AddFirm: React.FC = () => {
           </div>
 
           <div className="space-y-2">
-            <label className="text-sm font-medium">Company Size</label>
+            <label className="text-sm font-medium">Size</label>
             <Select
               value={formData.size}
               onValueChange={(value) => handleSelectChange('size', value)}
             >
               <SelectTrigger>
-                <SelectValue placeholder="Select company size" />
+                <SelectValue placeholder="Select size" />
               </SelectTrigger>
               <SelectContent>
                 {SIZES.map((size) => (

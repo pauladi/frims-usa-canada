@@ -3,22 +3,22 @@ import React, { createContext, useState, useContext, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { Firm, DirectoryContextType, FirmFormData, ModalType } from '@/types';
 
-// Mock data for Laravel firms
+// Mock data
 const initialFirms: Firm[] = [
   {
     id: uuidv4(),
-    name: 'Artisan Labs',
+    name: 'Smith & Associates Legal',
     location: {
-      city: 'San Francisco',
-      state: 'California',
+      city: 'New York City',
+      state: 'New York',
       country: 'USA'
     },
-    specialties: ['Laravel Framework', 'Laravel Livewire'],
-    size: '11-50 Employees',
+    specialties: ['Corporate Law', 'IT Law'],
+    size: 'Large',
     contact: {
-      email: 'contact@artisanlabs.dev',
+      email: 'contact@smithlegal.com',
       phone: '+1 (555) 123-4567',
-      website: 'www.artisanlabs.dev'
+      website: 'www.smithlegal.com'
     },
     ratings: {
       businessImpact: 85,
@@ -27,18 +27,18 @@ const initialFirms: Firm[] = [
   },
   {
     id: uuidv4(),
-    name: 'Forge Solutions',
+    name: 'Johnson Financial Services',
     location: {
       city: 'Chicago',
       state: 'Illinois',
       country: 'USA'
     },
-    specialties: ['Laravel Forge', 'Laravel Framework'],
-    size: '1-10 Employees',
+    specialties: ['Financial Accounting', 'Tax Accounting'],
+    size: 'Medium',
     contact: {
-      email: 'info@forgesolutions.io',
+      email: 'info@johnsonfinancial.com',
       phone: '+1 (555) 987-6543',
-      website: 'www.forgesolutions.io'
+      website: 'www.johnsonfinancial.com'
     },
     ratings: {
       businessImpact: 92,
@@ -47,18 +47,18 @@ const initialFirms: Firm[] = [
   },
   {
     id: uuidv4(),
-    name: 'Horizon Developers',
+    name: 'Reynolds & Partners',
     location: {
       city: 'Toronto',
       state: 'Ontario',
       country: 'Canada'
     },
-    specialties: ['Laravel Horizon', 'Laravel Vapor'],
-    size: '51-200 Employees',
+    specialties: ['Business Law', 'Corporate Law'],
+    size: 'Large',
     contact: {
-      email: 'contact@horizondev.ca',
+      email: 'contact@reynoldspartners.ca',
       phone: '+1 (416) 555-7890',
-      website: 'www.horizondev.ca'
+      website: 'www.reynoldspartners.ca'
     },
     ratings: {
       businessImpact: 75,
