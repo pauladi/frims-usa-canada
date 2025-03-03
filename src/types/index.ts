@@ -62,7 +62,13 @@ export const SPECIALTIES = [
   'Regulatory Compliance'
 ];
 
-export const SIZES = ['Small', 'Medium', 'Large'];
+export const SIZES = [
+  '1-10 employees', 
+  '11-50 employees', 
+  '51-200 employees', 
+  '201-500 employees', 
+  '501+ employees'
+];
 
 export const STATES = [
   'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 
