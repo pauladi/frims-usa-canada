@@ -1,4 +1,3 @@
-
 export interface Firm {
   id: string;
   name: string;
@@ -62,7 +61,7 @@ export const SPECIALTIES = [
   'Laravel Horizon'
 ];
 
-export const SIZES = ['Small', 'Medium', 'Large'];
+export const SIZES = ['1-10 Employees', '11-50 Employees', '51-200 Employees', '201+ Employees'];
 
 export const STATES = [
   'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 
