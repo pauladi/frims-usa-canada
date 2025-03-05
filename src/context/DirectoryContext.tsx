@@ -14,7 +14,7 @@ const initialFirms: Firm[] = [
       country: 'USA'
     },
     specialties: ['Corporate Law', 'IT Law'],
-    size: '201-500 employees',
+    size: 'Large',
     contact: {
       email: 'contact@smithlegal.com',
       phone: '+1 (555) 123-4567',
@@ -34,7 +34,7 @@ const initialFirms: Firm[] = [
       country: 'USA'
     },
     specialties: ['Financial Accounting', 'Tax Accounting'],
-    size: '51-200 employees',
+    size: 'Medium',
     contact: {
       email: 'info@johnsonfinancial.com',
       phone: '+1 (555) 987-6543',
@@ -54,7 +54,7 @@ const initialFirms: Firm[] = [
       country: 'Canada'
     },
     specialties: ['Business Law', 'Corporate Law'],
-    size: '501+ employees',
+    size: 'Large',
     contact: {
       email: 'contact@reynoldspartners.ca',
       phone: '+1 (416) 555-7890',
