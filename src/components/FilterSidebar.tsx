@@ -22,9 +22,9 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ onClose }) => {
   return (
     <div className="fixed inset-y-0 right-0 z-50 flex">
       <div className="fixed inset-0 bg-black/20" onClick={onClose} />
-      <div className="w-80 h-full ml-auto bg-white p-6 flex flex-col relative">
-        <div className="flex justify-between items-center mb-8">
-          <h2 className="text-lg font-semibold">Filters</h2>
+      <div className="w-80 h-full ml-auto bg-white p-6 flex flex-col relative shadow-lg">
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="text-xl font-semibold text-gray-800">Filters</h2>
           <Button
             variant="ghost"
             size="icon"
@@ -42,7 +42,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ onClose }) => {
               value={filters.specialty || ""}
               onValueChange={(value) => setFilters({ specialty: value || null })}
             >
-              <SelectTrigger className="w-full border-gray-200">
+              <SelectTrigger className="w-full rounded-lg border-gray-300">
                 <SelectValue placeholder="Select specialty" />
               </SelectTrigger>
               <SelectContent>
@@ -61,7 +61,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ onClose }) => {
               value={filters.size || ""}
               onValueChange={(value) => setFilters({ size: value || null })}
             >
-              <SelectTrigger className="w-full border-gray-200">
+              <SelectTrigger className="w-full rounded-lg border-gray-300">
                 <SelectValue placeholder="Select size" />
               </SelectTrigger>
               <SelectContent>
@@ -80,7 +80,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ onClose }) => {
               value={filters.state || ""}
               onValueChange={(value) => setFilters({ state: value || null })}
             >
-              <SelectTrigger className="w-full border-gray-200">
+              <SelectTrigger className="w-full rounded-lg border-gray-300">
                 <SelectValue placeholder="Select state/province" />
               </SelectTrigger>
               <SelectContent>
@@ -97,7 +97,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ onClose }) => {
         <Button 
           onClick={clearFilters}
           variant="outline"
-          className="w-full mt-6 border-gray-200 hover:bg-gray-50"
+          className="w-full mt-6 rounded-lg border-gray-300 hover:bg-gray-50 text-gray-700"
         >
           Clear Filters
         </Button>
